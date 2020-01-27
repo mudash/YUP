@@ -58,8 +58,8 @@ controls:
         expiration_date_utc: "--- 2029-10-14 08:25:57.571522000 Z\n"
         identifier: ticket_12345
     justification: "This is a temp waiver for ticket_12345"
-
-    ```
+    
+```
 
 ### Waiver File Output (Waiver.yaml)
 
@@ -76,7 +76,6 @@ controls:
 ### Remediation File Output (Remediate.yaml)
 
 ```
-
 provider: CIS
 benchmark: CentOS Linux 7
 provider_version: v.2.2.0
