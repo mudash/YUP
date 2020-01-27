@@ -13,7 +13,7 @@ This is a development repository for a Yaml parser needed for Effortless DCA. It
 git clone https://github.com/mudash/YUP.git
 cd YUP
 go build -o YUP
-/YUP -input=./sample/customer_updated.yaml -output=./output
+./YUP -input=./sample/customer_updated.yaml -output=./output
 
 ```
 
