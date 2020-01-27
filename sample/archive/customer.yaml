@@ -1,0 +1,19 @@
+---
+provider: CIS
+benchmark: CentOS Linux 7
+provider_version: v.2.2.0
+controls:
+- id: 1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled
+  waiver: true
+  justification: "This is a waiver because John Snow says so"
+- id: 1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
+  remediate: true
+- id: 1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
+  remediate: true
+  overlay_command:
+    - local: echo "hello, this is an overlay command"
+- id: 1.1.1.4_madeup_control
+  waiver: true
+  run: false
+  justification: "This is a made up control, waive it"
+  expiration_date: 2020-06-30

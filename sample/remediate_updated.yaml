@@ -1,0 +1,22 @@
+---
+provider: CIS
+benchmark: CentOS Linux 7
+provider_version: v.2.2.0
+controls:
+  - id: CIS_CentOS_Linux_7_1_1_1_1
+    enabled: false
+    waiver:
+      justification: "This is a waiver because John Snow says so"
+  - id: CIS_CentOS_Linux_7_1_1_1_2
+    enabled: true
+  - id: CIS_CentOS_Linux_7_1_1_1_3
+    enabled: true
+    overlay_command:
+      - local: echo "hello, this is an overlay command"
+  - id: CIS_CentOS_Linux_7_1_1_1_4
+    enabled: true
+    waiver:
+      start_date_utc: "--- 2019-10-17 08:25:57.571436000 Z\n"
+      expiration_date_utc: "--- 2029-10-14 08:25:57.571522000 Z\n"
+      identifier: ticket_12345
+      justification: "This is a temp waiver for ticket_12345"

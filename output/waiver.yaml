@@ -1,0 +1,6 @@
+1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled:
+  justification: This is a waiver because John Snow says so
+  run: false
+1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled:
+  justification: Company policy is to do something other than what CIS says
+  run: false
