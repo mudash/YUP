@@ -12,7 +12,7 @@ import (
 	"log"
 )
 
-const waiverFileName = "waiver.yaml"
+const waiverFileName = "inspec.yaml"
 const remediateFileName = "remediate.yaml"
 
 func main() {
