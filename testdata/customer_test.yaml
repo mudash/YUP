@@ -1,0 +1,36 @@
+---
+provider: CIS
+benchmark: CentOS Linux 7
+provider_version: v.2.2.0
+controls:
+# This is a permenant waiver that has no start or end date for both Scan and Remediate
+  - id: 1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled
+    scan: 
+      run: false
+    remediate:
+      run: false
+    justification: "This is a waiver because John Snow says so"
+# This is an example that remediates the control 
+  - id: 1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
+    remediate:
+      run: true
+# This is an example that changes the value of the remediation and disables scan
+  - id: 1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
+    scan:
+      run: false
+    remediate: 
+      run: true
+      overlay_command:
+        - local: echo "hello, this is an overlay command"
+    justification: "Company policy is to do something other than what CIS says"
+    # This is a time specfic waiver for remediation that also runs the scan
+  - id: 1.1.1.4_Ensure_mounting_of_hfs_filesystems_is_disabled
+    scan:
+      run: true
+    remediate:
+      run: true
+      Waiver:
+        start_date_utc: "--- 2019-10-17 08:25:57.571436000 Z\n"
+        expiration_date_utc: "--- 2029-10-14 08:25:57.571522000 Z\n"
+        identifier: ticket_12345
+    justification: "This is a temp waiver for ticket_12345"
